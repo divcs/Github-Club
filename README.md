@@ -10,6 +10,8 @@ Welcome to the **MERN Projects Repository**! This repository is a collection of 
   - [🛠️ Technologies Used](#️-technologies-used)
   - [📋 Project List](#-project-list)
   - [🛠️ Setup Instructions](#️-setup-instructions)
+  - [🤝 Contributing](#-contributing)
+  - [📜 License](#-license)
 
 ## 📖 About
 
@@ -70,4 +72,52 @@ To get started with any project:
 
 4. Configure environment variables:
 
-   Each project folder contains an .env.example file. Rename it to .env and add the required keys.
+Each project folder contains an .env.example file. Rename it to .env and add the required keys.
+
+5. Run the development servers:
+
+   ```bash
+   #For backend
+   npm run dev
+
+   #For frontend
+   npm start
+   ```
+
+6. Open your browser and go to:
+   ```bash
+   http://localhost:3000
+   ```
+
+## 🤝 Contributing
+
+We welcome contributions! Follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes
+
+   ```bash
+   git commit -m "Add feature name"
+   ```
+
+4. Push to your branch
+
+   ```bash
+   git push origin feature-name
+   ```
+
+5. Submit a pull request.
+
+## 📜 License
+
+This repository is licensed under the **MIT License**. Feel free to use, modify, and distribute the code as needed.
+
+Happy Coding! 😊
+
+```
+
+```

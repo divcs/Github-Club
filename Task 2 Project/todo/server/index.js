@@ -15,7 +15,7 @@ app.use(cors())
 app.use(express.json())
 
 // API routes
-app.use('/api', router)
+app.use('/api', router) //global middleware
 
 // Function to connect to the database and start the server
 async function startServer() {

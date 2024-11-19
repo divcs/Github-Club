@@ -121,8 +121,6 @@ router.post('/todos/update/:id', authenticateToken, async (req, res) => {
   }
 })
 
-// are wo copy krte time thoda aajata h space wgera ya koi inbuilt character ka
-
 // POST /users/register - Register a new user
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body
