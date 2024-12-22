@@ -1,15 +1,25 @@
-import express from 'express'
-import cors from 'cors'
-import records from './routes/record.js'
+const express = require('express')
+const cors = require('cors')
+const dotenv = require('dotenv')
+const authRoutes = require('./routes/authRoutes')
+const timeCapsuleRoutes = require('./routes/timeCapsule') // Renamed for clarity
+const connectDB = require('./config/db')
+dotenv.config()
 
-const PORT = process.env.PORT || 5050
 const app = express()
-
 app.use(cors())
-app.use(express.json())
-app.use('/record', records)
 
-// start the Express server
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`)
+// Middleware to parse JSON data and form data
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+// Routes
+app.use('/api', authRoutes) // Auth routes
+app.use('/api', timeCapsuleRoutes) // Time capsule routes
+
+// Connect to DB and start the server
+const PORT = process.env.PORT || 4000
+app.listen(PORT, async () => {
+  await connectDB() // Ensure DB is connected before starting the server
+  console.log(`Server is listening on port ${PORT}`)
 })
