@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { postApi } from '../apiService'
 import { toast } from 'sonner'
-
+import { useNavigate } from 'react-router-dom'
 const LoginPage = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-
+  const navigate = useNavigate()
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log('Login Attempt:', { email, password })
@@ -14,9 +14,13 @@ const LoginPage = () => {
     const response = await postApi('login', payload)
     console.log(response)
     if (response?.data?.status === true) {
-      // console.log(response.data.data.data)
-      console.log('Hello')
+      const token = response.data?.token
+      localStorage.setItem('token', token)
       toast.success('Login Successful')
+      navigate('/')
+    }
+    if (response?.response?.status === 401) {
+      toast.error('Login Failed')
     }
   }
 

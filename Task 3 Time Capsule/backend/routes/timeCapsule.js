@@ -18,7 +18,7 @@ router.post(
 
 router.get('/get-all-time-capsule', authMiddleware, getAllTimeCapsules)
 
-router.get(
+router.post(
   '/get-individual-time-capsule',
   authMiddleware,
   getIndividualTimeCapsule

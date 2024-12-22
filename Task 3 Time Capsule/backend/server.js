@@ -4,10 +4,12 @@ const dotenv = require('dotenv')
 const authRoutes = require('./routes/authRoutes')
 const timeCapsuleRoutes = require('./routes/timeCapsule') // Renamed for clarity
 const connectDB = require('./config/db')
+const path = require('path')
 dotenv.config()
 
 const app = express()
 app.use(cors())
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 
 // Middleware to parse JSON data and form data
 app.use(express.json())

@@ -45,10 +45,15 @@ const createTimeCapsule = async (req, res) => {
 
 const getAllTimeCapsules = async (req, res) => {
   try {
-    const timeCapsules = await TimeCapsule.find()
+    const userId = req.user.id // Get the authenticated user's ID
+
+    // Find all time capsules belonging to the authenticated user
+    const timeCapsules = await TimeCapsule.find({ userId })
 
     if (!timeCapsules.length) {
-      return res.status(404).json({ message: 'No time capsules found' })
+      return res
+        .status(404)
+        .json({ message: 'No time capsules found for this user' })
     }
 
     res.status(200).json({
