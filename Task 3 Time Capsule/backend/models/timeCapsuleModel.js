@@ -1,12 +1,13 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
 const timeCapsuleSchema = new mongoose.Schema(
   {
     userId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      ref: 'User',
       required: true,
     },
+
     coverPhoto: { type: String, required: true },
     title: { type: String, required: true },
     dateTime: { type: Date, required: true },
@@ -14,6 +15,6 @@ const timeCapsuleSchema = new mongoose.Schema(
     content: { type: String, required: true },
   },
   { timestamps: true }
-);
+)
 
-module.exports = mongoose.model("TimeCapsule", timeCapsuleSchema);
+module.exports = mongoose.model('TimeCapsule', timeCapsuleSchema)
