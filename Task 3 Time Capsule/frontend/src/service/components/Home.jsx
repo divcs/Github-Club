@@ -22,13 +22,17 @@ const HomePage = () => {
     navigate('/createcapsule')
   }
 
-  // Handle logout functionality
   const handleLogout = () => {
-    // Clear the authentication token from localStorage
-    localStorage.removeItem('token')
+    // Ask for user confirmation before logging out
+    const confirmLogout = window.confirm('Are you sure you want to log out?')
 
-    // Redirect to the login page
-    navigate('/login')
+    if (confirmLogout) {
+      // Clear the authentication token from localStorage
+      localStorage.removeItem('token')
+
+      // Redirect to the login page
+      navigate('/login')
+    }
   }
 
   return (
