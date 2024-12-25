@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 // Base URL for the API
-export const baseUrl = 'http://localhost:5000/api/' // Replace with your API base URL
-export const coverImage = 'http://localhost:5000/' // Replace with your API base URL
+export const baseUrl = 'http://localhost:5000/api/'
+export const coverImage = 'http://localhost:5000/'
 
 // Create an Axios instance
 const axiosInstance = axios.create({
@@ -29,14 +29,12 @@ axiosInstance.interceptors.request.use(
   }
 )
 
-// Response Interceptor (optional)
+// Response Interceptor
 axiosInstance.interceptors.response.use(
   (response) => {
-    // Handle successful responses
     return response
   },
   (error) => {
-    // Handle error responses
     console.error('Error in Response Interceptor:', error)
     return Promise.reject(error)
   }
