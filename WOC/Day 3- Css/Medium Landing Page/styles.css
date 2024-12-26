@@ -1,0 +1,137 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #242424;
+  background-color: #f5f5f5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  height: 60px;
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: #000;
+}
+
+header .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+header .nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+header .nav-links li a:hover {
+  color: #000;
+}
+.nav-links .get-started {
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+header .get-started {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+  background-color: #ffffff;
+}
+
+.hero-content {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  font-family: 'Georgia', serif;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero-content .cta-button {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.hero-content .cta-button:hover {
+  background-color: #444;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 80%;
+  height: 500px;
+}
+
+footer {
+  background-color: #ffffff;
+  padding: 20px 60px;
+  text-align: center;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+footer .footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+footer .footer-links li a:hover {
+  color: #000;
+}
