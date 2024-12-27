@@ -1,0 +1,20 @@
+{
+  "name": "day-4---postcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "postcss style.css --dir dest -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "postcss-nested": "^7.0.2"
+  }
+}

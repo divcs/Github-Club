@@ -1,0 +1,17 @@
+body {
+  div {
+    background-color: aquamarine;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    align-content: center;
+  }
+  p {
+    background-color: antiquewhite;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    align-content: center;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+  }
+}
