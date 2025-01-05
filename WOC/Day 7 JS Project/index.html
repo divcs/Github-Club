@@ -11,18 +11,52 @@
  <!-- Task Input -->
  <div class="mt-4 flex gap-8 justify-center">
   <input id="taskInput" type="text" placeholder="Enter task"
-   class="w-[70%] bg-transparent px-7 outline-none border-2 border-zinc-700   rounded-md backdrop:blur-md" />
-  <button class="text-white border border-blue-600 py-3 px-4 rounded-md">Add Task</button>
+   class="w-[70%] bg-transparent px-7 outline-none border-2 border-zinc-700   rounded-md backdrop-blur-md" />
+  <button onclick="addTask()" class="border border-blue-600 text-blue-600 py-3 px-4 rounded-md backdrop-blur-md">Add
+   Task</button>
  </div>
 
  <!-- Task List -->
  <div class="w-full h-[80%] p-6">
   <h1 class="w-full text-center text-3xl font-bold">All tasks</h1>
 
-  <div>
-   <!-- To-Do Columns -->
+  <div class="w-full gap-4 text-center h-full flex">
+   <!-- To-Do Column -->
+   <div ondrop="drop(event)" ondragover="allowDrop(event)"
+    class="w-full p-4 border-2 border-blue-600 bg-black bg-opacity-20 shadow-md backdrop-blur-md" id="todo">
+    <h2 class="font-semibold text-blue-500 text-2xl mb-2">To-Do</h2>
+    <div id="todo-list" class="space-y-4"></div>
+   </div>
+
+   <!-- In Progress Column -->
+   <div ondrop="drop(event)" ondragover="allowDrop(event)"
+    class="w-full p-4 border-2 border-yellow-600 bg-black bg-opacity-20 shadow-md backdrop-blur-md" id="inprogress">
+    <h2 class="font-semibold text-2xl mb-2 text-yellow-500">In Progress</h2>
+    <div id="inprogress-list" class="space-y-4">
+
+    </div>
+   </div>
+
+   <!-- Done Column -->
+   <div ondrop="drop(event)" ondragover="allowDrop(event)"
+    class="w-full p-4 border-2 border-green-600 bg-black bg-opacity-20 shadow-md backdrop-blur-md" id="done">
+    <h2 class="font-semibold text-green-500 text-2xl mb-2">Done</h2>
+    <div id="done-list" class="space-y-4"></div>
+   </div>
+
+   <!-- Backlog Column -->
+
+
+   <div ondrop="drop(event)" ondragover="allowDrop(event)"
+    class="w-full p-4 border-2 border-red-600 bg-black bg-opacity-20 shadow-md backdrop-blur-md" id="backlog">
+    <h2 class="font-semibold text-red-500 text-2xl mb-2">Backlog</h2>
+    <div id="backlog-list" class="space-y-4"></div>
+   </div>
   </div>
  </div>
+
+ <script src="app.js"></script>
 </body>
 
 </html>
+
