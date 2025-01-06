@@ -1,0 +1,51 @@
+/* styles.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between the eyes and mouth */
+}
+
+.eyes {
+  display: flex;
+  gap: 30px; /* Space between the eyes */
+}
+
+.eye {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pupil {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.1s ease-out;
+}
+
+.mouth {
+  width: 150px;
+  height: 75px;
+  border: 5px solid black;
+  border-radius: 0 0 75px 75px; /* Curved bottom edge for the smile */
+  border-top: none; /* Hide the top border */
+  background-color: transparent;
+}
