@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metly Design</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+ body {
+  font-family: 'Inter', sans-serif;
+ }
+</style>
+
+
+<body class="bg-[#1A1D3B] text-white">
+ <!-- Navbar -->
+ <header class="flex justify-between items-center px-8 py-4 bg-[#131530]">
+  <h1 class="text-2xl font-bold">METLY</h1>
+  <nav>
+   <ul class="flex space-x-6">
+    <li><a href="#" class="hover:underline">Pricing</a></li>
+    <li><a href="#" class="hover:underline">Integrations</a></li>
+    <li><a href="#" class="hover:underline">Contact Sales</a></li>
+   </ul>
+  </nav>
+  <button class="px-4 py-2 bg-[#3E45FF] hover:bg-[#3239D8] rounded-lg">Download App</button>
+ </header>
+
+ <!-- Hero Section -->
+ <section class="px-8 py-16 bg-[#8ECDF6] text-gray-900 relative">
+  <section class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+   <!-- Left Content -->
+   <div>
+    <p class="uppercase text-sm font-semibold mb-2">Sales Analytics</p>
+    <h2 class="text-5xl font-bold leading-tight mb-4">We Make Your Business Different</h2>
+    <a href="./img2.jpg" class="inline-flex items-center text-lg font-semibold text-[#1A1D3B] hover:underline">Book a
+     Consultation</a>
+   </div>
+   <!-- Right Image -->
+   <section class="relative">
+    <section src="img2.jpg" alt="Profile" class="rounded-full w-72 h-72 mx-auto">
+     <div class="absolute top-10 right-10 transform bg-[#1A1D3B] text-white p-4 rounded-full">
+      <p class="text-sm font-semibold">Start Applying Innovative Solutions</p>
+     </div>
+    </section>
+   </section>
+  </section>
+
+  <!-- Analytics Section -->
+  <section class="px-8 py-16 bg-[#131530]">
+   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Chart -->
+    <div>
+     <h3 class="text-2xl font-bold mb-4">Track Sales</h3>
+     <div class="w-full h-64 bg-[#1A1D3B] rounded-lg flex items-center justify-center">
+      <canvas id="salesChart"></canvas>
+     </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+     <div class="bg-[#292D56] p-6 rounded-lg">
+      <h4 class="text-lg font-semibold">Business Lectures</h4>
+      <p class="text-4xl font-bold">400+</p>
+     </div>
+     <div class="bg-[#8ECDF6] text-[#1A1D3B] p-6 rounded-lg">
+      <h4 class="text-lg font-semibold">Easily track business metrics</h4>
+      <p class="text-4xl font-bold">34 metrics</p>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <script>
+   // Chart.js Sales Chart
+   const ctx = document.getElementById('salesChart').getContext('2d');
+   const salesChart = new Chart(ctx, {
+    type: 'line', // Line chart
+    data: {
+     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+     datasets: [{
+      label: 'Sales',
+      data: [200, 300, 400, 342, 420, 500],
+      borderColor: '#8ECDF6',
+      backgroundColor: 'rgba(142, 205, 246, 0.2)',
+      borderWidth: 2,
+      tension: 0.4
+     }]
+    },
+    options: {
+     responsive: true,
+     plugins: {
+      legend: {
+       display: false // Hide the legend
+      }
+     },
+     scales: {
+      x: {
+       grid: {
+        color: '#292D56'
+       }
+      },
+      y: {
+       grid: {
+        color: '#292D56'
+       }
+      }
+     }
+    }
+   });
+  </script>
+ </section>
+</body>
+
+</html>
