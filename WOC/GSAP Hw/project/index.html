@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LottieFiles Clone</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #ffffff, #f2fcf9);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #03c9a9;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      color: #555;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #03c9a9;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 25px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary {
+      background: #03c9a9;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #02b294;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #555;
+    }
+
+    .btn-secondary:hover {
+      color: #03c9a9;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .hero .btn-primary {
+      font-size: 18px;
+      padding: 12px 30px;
+    }
+
+    /* Illustration */
+    .illustration {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .illustration img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">LottieFiles</div>
+    <nav>
+      <a href="#">Products</a>
+      <a href="#">Integrations</a>
+      <a href="#">Customers</a>
+      <a href="#">Education</a>
+      <a href="#">Pricing</a>
+    </nav>
+    <div>
+      <button class="btn btn-secondary">Login</button>
+      <button class="btn btn-primary">Sign Up</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Great designs come alive with motion!</h1>
+    <p>Create, edit, collaborate on and implement lightweight Lottie animations across websites, apps, socials, and
+      more.</p>
+    <button class="btn btn-primary">Get started - it's free</button>
+  </section>
+
+  <!-- Illustration -->
+  <div class="illustration">
+    <img src="https://assets9.lottiefiles.com/images/homepage/animations-2.0/collab-animation-2.svg" alt="Illustration">
+  </div>
+</body>
+
+</html>
