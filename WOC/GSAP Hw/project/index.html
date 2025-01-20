@@ -2,154 +2,177 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LottieFiles Clone</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom, #ffffff, #f2fcf9);
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background: #ffffff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header .logo {
-      font-size: 24px;
-      font-weight: 700;
-      color: #03c9a9;
-    }
-
-    header nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    header nav a {
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 500;
-      color: #555;
-      transition: color 0.3s;
-    }
-
-    header nav a:hover {
-      color: #03c9a9;
-    }
-
-    .btn {
-      padding: 10px 20px;
-      border-radius: 25px;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .btn-primary {
-      background: #03c9a9;
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: #02b294;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: #555;
-    }
-
-    .btn-secondary:hover {
-      color: #03c9a9;
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      font-weight: 700;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #555;
-      max-width: 600px;
-      margin: 0 auto 40px;
-    }
-
-    .hero .btn-primary {
-      font-size: 18px;
-      padding: 12px 30px;
-    }
-
-    /* Illustration */
-    .illustration {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
-    }
-
-    .illustration img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+ <link rel="stylesheet" href="style.css">
+ 
+ <title>Replica</title>
+ <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <header>
-    <div class="logo">LottieFiles</div>
-    <nav>
-      <a href="#">Products</a>
-      <a href="#">Integrations</a>
-      <a href="#">Customers</a>
-      <a href="#">Education</a>
-      <a href="#">Pricing</a>
-    </nav>
-    <div>
-      <button class="btn btn-secondary">Login</button>
-      <button class="btn btn-primary">Sign Up</button>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Great designs come alive with motion!</h1>
-    <p>Create, edit, collaborate on and implement lightweight Lottie animations across websites, apps, socials, and
-      more.</p>
-    <button class="btn btn-primary">Get started - it's free</button>
-  </section>
-
-  <!-- Illustration -->
-  <div class="illustration">
-    <img src="https://assets9.lottiefiles.com/images/homepage/animations-2.0/collab-animation-2.svg" alt="Illustration">
+ <!-- <img class="bg-gradient-to-b from-[#fffff] to-white font-sans"> -->
+ <!-- Navbar -->
+ <nav
+  class="flex items-center justify-between px-8 py-4 bg-[#ffffff] text-[#000000] text-base font-md sticky top-0 shadow-lg w-full">
+  <div class="flex items-center space-x-4">
+   <img src="./assets/asset 15.svg" alt="LottieFiles Logo" class="w-8 h-8">
+   <h1 class="text-xl font-bold text-gray-800">LottieFiles</h1>
   </div>
+  <ul class="hidden md:flex items-center space-x-8 text-gray-600">
+   <!-- Dropdown: Products -->
+   <li class="relative group">
+    <button class="hover:text-gray-800 cursor-pointer">Products</button>
+    <div class="absolute hidden group-hover:block bg-white shadow-lg rounded mt-2 py-2 w-40">
+     <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Product 1</a>
+     <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Product 2</a>
+     <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Product 3</a>
+    </div>
+   </li>
+   <!-- Dropdown: Integrations -->
+   <li class="relative group">
+    <button class="hover:text-gray-800 cursor-pointer">Integrations</button>
+    <div class="absolute hidden group-hover:block bg-white shadow-lg rounded mt-2 py-2 w-40">
+     <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Integration 1</a>
+     <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Integration 2</a>
+     <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Integration 3</a>
+    </div>
+   </li>
+   <!-- Dropdown: Customers -->
+   <li class="relative group">
+    <button class="hover:text-gray-800 cursor-pointer">Customers</button>
+    <div class="absolute hidden group-hover:block bg-white shadow-lg rounded mt-2 py-2 w-40">
+     <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Customer Story 1</a>
+     <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Customer Story 2</a>
+    </div>
+   </li>
+   <!-- Dropdown: Education -->
+   <li class="relative group">
+    <button class="hover:text-gray-800 cursor-pointer">Education</button>
+    <div class="absolute hidden group-hover:block bg-white shadow-lg rounded mt-2 py-2 w-40">
+     <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Tutorial 1</a>
+     <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Tutorial 2</a>
+    </div>
+   </li>
+   <li class="hover:text-gray-800 cursor-pointer">Pricing</li>
+  </ul>
+  <!-- Searchbar -->
+  <div class="flex items-center space-x-4">
+   <input type="text" placeholder="Search animations"
+    class="border border-gray-300 rounded px-4 py-2 text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+   <button class="text-[#019d91] hover:text-[#00ddb3] font-semibold">Login</button>
+   <button class="bg-[#019d91] text-white px-4 py-2 rounded-2xl font-semibold hover:bg-[#00ddb3]">Sign Up</button>
+  </div>
+ </nav>
+
+ <div class="hero2 flex justify-between items-center  py-16">
+  <!-- left side, -->
+  <div class="left w-1/2  pl-28">
+   <div class="heading max-h-96 max-w-[1000px]">
+    <h2 class="text-7xl font-bold text-gray-800 ">
+     Great designs come alive with motion!
+    </h2>
+   </div>
+   <p class="text-lg text-gray-600 max-w-2xl mt-6 ">
+    Create, edit, collaborate on and implement lightweight Lottie animations across websites, apps, socials
+    and
+    more.
+   </p>
+   <button
+    class="mt-8 bg-[#019d91] text-white text-lg font-semibold px-6 py-3 w-60 h-16 rounded-2xl  hover:bg-[#00ddb3]">
+    Get started - it's free
+   </button>
+  </div>
+
+  <!-- Video -->
+  <div class="right w-1/2 max-w-[800px] flex justify-center items-center">
+   <video class="h-[30rem] w-[45rem]" autoplay loop>
+    <source src="./svg.mp4" type="video/mp4">
+   </video>
+  </div>
+ </div>
+
+ <!-- Companies -->
+ <div class="company my-4 flex flex-col justify-center ">
+  <p class="text-center text-gray-600 text-lg">Trusted by 11 million+ designers & developers from over 280,000 companies
+   worldwide</p>
+  <div class="flex gap-4 mx-auto mt-8 flex-wrap items-center justify-center max-w-[1000px]">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Duolingo_logo_a1b829169a.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Duolingo_logo_a1b829169a.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Duolingo_logo_a1b829169a.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Duolingo_logo_a1b829169a.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Disney_3b17715e15.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Disney_3b17715e15.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Disney_3b17715e15.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Google_344d09a443.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Google_344d09a443.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Google_344d09a443.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Homepage_Redesign_Uber_dd14ae0d38.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Homepage_Redesign_Uber_dd14ae0d38.svg" alt="">
+   <img src="https://stp-v4-cdn.lottiefiles.com/Homepage_Redesign_Uber_dd14ae0d38.svg" alt="">
+  </div>
+ </div>
+
+ <div class="swiper  ">
+  <!-- Wrapper -->
+  <div class="swiper-wrapper ">
+   <!-- Slide 1 -->
+   <div class="swiper-slide ">
+    <video autoplay loop>
+     <source src="./Gojek_a2eb57ac8e.mp4" type="video/mp4">
+    </video>
+   </div>
+   <!-- Slide 2 -->
+   <div class="swiper-slide">
+    <video autoplay loop>
+     <source src="./Disney_4240106361.mp4" type="video/mp4">
+    </video>
+   </div>
+   <!-- Slide 3 -->
+   <div class="swiper-slide">
+    <video autoplay loop>
+     <source src="./Google_346cccbeba.webm" type="video/webm">
+    </video>
+   </div>
+   <!-- Slide 4 -->
+   <div class="swiper-slide">
+    <video autoplay loop>
+     <source src="./Spotify_a336ab4bf8.mp4" type="video/mp4">
+    </video>
+   </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- Navigation Buttons -->
+  <div class="swiper-button-prev  "></div>
+  <div class="swiper-button-next "></div>
+ </div>
+
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ <script>
+  const swiper = new Swiper('.swiper', {
+   direction: 'horizontal',
+   loop: true,
+   slidesPerView: 3,
+   spaceBetween: 10, // Reduced gap between slides
+
+   // Disable Pagination
+   pagination: {
+    el: '.swiper-pagination',
+    clickable: false, // Disable bullet clicks
+   },
+
+   // Navigation buttons configuration
+   navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+   },
+  });
+
+ </script>
 </body>
 
 </html>

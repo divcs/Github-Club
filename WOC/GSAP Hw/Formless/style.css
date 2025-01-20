@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Custom Properties */
+:root {
+  --green-glow: #00FF66;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0A0A0A;
+  color: white;
+}
+
+/* Background Gradient */
+.bg-gradient {
+  background: radial-gradient(circle at 50% 50%, var(--green-glow) 0%, transparent 50%);
+  opacity: 0.15;
+  filter: blur(120px);
+}
+
+/* Animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Blur Effect */
+#header {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(10, 10, 10, 0.8);
+}
+
+/* Hover Effects */
+a:hover {
+  color: var(--green-glow);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+/* Meteor underline effect */
+.navlink {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navlink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #00FF66, transparent);
+  transition: width 0.5s ease, left 0.5s ease;
+}
+
+.navlink:hover::after {
+  width: 100%;
+  left: 0;
+}
+/* Button hover effects */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  transition: left 0.4s ease-in-out;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  background: #00FF66; /* Matches 'formless-green' */
+  color: #000;        /* Changes text to black */
+  transform: scale(1.05); /* Adds a slight zoom effect */
+}
+/* Smooth visibility transition */
+.hidden-logo {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.visible-logo {
+  opacity: 1;
+}
