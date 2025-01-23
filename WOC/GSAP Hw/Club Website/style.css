@@ -1,0 +1,19 @@
+/* Add this to a separate CSS file or include it in the HTML <style> block */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.baseclub-logo {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
